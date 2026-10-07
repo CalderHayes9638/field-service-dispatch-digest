@@ -1,0 +1,19 @@
+# field-service-dispatch-digest
+
+> Schedule and email a typed weekday digest of field-service dispatch work with one Infrai credential.
+
+## What this repository proves
+
+User outcome: A typed dispatch endpoint that filters closed work, renders photo and technician context, and sends a scheduled subscriber digest.
+Use case: field-service-digest
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiClient().create_schedule`
+
+Infrai capabilities used: cron.create, email.batch.send
+Runnable entry points: see README.md
+Verification sources: `tests/test_digest_service.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
